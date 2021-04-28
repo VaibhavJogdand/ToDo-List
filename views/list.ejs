@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body style="font-family: 'Roboto Slab', serif;">
+
+
+  <div class="box" id="heading">
+
+    <h1 style="color: #000000 "> <%= listName   %></h1>
+
+  </div>
+
+  <div class="box">
+
+    <% for(var i=0;i<items.length;i++){ %>
+
+    <div class="item">
+
+      <input type="checkbox">
+      <p><%= items[i] %></p>
+
+    </div>
+
+    <% } %>
+
+    <!-- <% if(listName === "Work List"){ %>
+      <form class="item" action="/work" method="post">
+
+        <input type="text" name="newItem" placeholder="Enter what to do" autofocus>
+        <button type="submit" name="listName" value= <%= listName   %> >+</button>
+      </form>
+
+    <% }else{ %>
+      <form class="item" action="/" method="post">
+
+        <input type="text" name="newItem" placeholder="Enter what to do" autofocus>
+        <button type="submit" name="listName" value= <%= listName   %> >+</button>
+      </form>
+
+    <% } %> -->
+
+
+
+    <form class="item" action="/" method="post">
+
+      <input type="text" name="newItem" placeholder="Enter what to do" autofocus>
+      <button type="submit" name='list' value= <%= listName  %> >+</button>
+    </form>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
